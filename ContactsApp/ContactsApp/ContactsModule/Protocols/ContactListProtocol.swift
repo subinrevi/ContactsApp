@@ -24,7 +24,7 @@ protocol PresenterToContactListViewProtocol: AnyObject {
     
      var presenter: ContactListViewToPresenterProtocol? { get set }
     
-     func showContactList()
+    func showContactList(info: [Contact])
 }
 
 // PRESENTER -> ROUTER
@@ -43,6 +43,6 @@ protocol PresenterToInteractorProtocol: AnyObject {
 
 // INTERACTOR -> PRESENTER
 protocol InteractorToPresenterProtocol: AnyObject {
-    func didReceiveContacts()
+    func didReceiveContacts(list: [Contact])
 }
 

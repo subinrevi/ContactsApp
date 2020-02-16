@@ -25,8 +25,7 @@ class ContactListPresenter: ContactListViewToPresenterProtocol {
 
 extension ContactListPresenter: InteractorToPresenterProtocol {
     
-    func didReceiveContacts() {
-        print("Fourth call comes back to the presenter >>>>")
-        view?.showContactList()
+    func didReceiveContacts(list: [Contact]) {
+        view?.showContactList(info: list)
     }
 }

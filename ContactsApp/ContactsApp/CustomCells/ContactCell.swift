@@ -10,15 +10,26 @@ import UIKit
 
 class ContactCell: UITableViewCell {
 
+    @IBOutlet weak var userIcon: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var mobileNumber: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.layer.shadowColor = UIColor.lightText.cgColor
+        self.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
+        self.layer.shadowOpacity = 1.0
+        self.layer.shadowRadius = 2
+        self.layer.cornerRadius = 10
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    func displayContactInfo(model: Contact) {
+        name.text = model.name
+        mobileNumber.text = String(model.mobileNumber)
     }
 
 }

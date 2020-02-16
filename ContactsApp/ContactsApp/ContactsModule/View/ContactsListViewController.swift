@@ -22,6 +22,7 @@ class ContactsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerTableViewCell()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,15 +30,42 @@ class ContactsListViewController: UIViewController {
         print("First call comes here >")
         presenter?.fetchContactList()
     }
+    
+    func registerTableViewCell() {
+        
+        contactsTableView.estimatedRowHeight = 50
+        contactsTableView.rowHeight = UITableView.automaticDimension
+        
+        let contactsNib = UINib(nibName: "ContactCell", bundle: nil)
+        contactsTableView.register(contactsNib, forCellReuseIdentifier: "ContactCell")
+    }
 }
 
 
 extension ContactsListViewController: PresenterToContactListViewProtocol {
     
-    func showContactList() {
+    func showContactList(info: [Contact]) {
         print("Fifth call finally comes back to the view controller >>>>>")
+        self.contacts = info
     }
-    
 }
 
+
+extension ContactsListViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        contacts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath) as! ContactCell
+        let contactInfo = contacts[indexPath.row]
+        cell.displayContactInfo(model: contactInfo)
+        return cell
+    }
+}
 
