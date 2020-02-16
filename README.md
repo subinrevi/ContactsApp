@@ -1,2 +1,2 @@
 # ContactsApp
-Contacts app lets you add user contacts to your phone.
+Contacts app to add user contacts to your phone.
