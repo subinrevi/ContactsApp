@@ -15,8 +15,8 @@ protocol ContactListViewToPresenterProtocol: class {
     var interactor: PresenterToInteractorProtocol? { get set }
     var router: PresenterToContactListRouterProtocol? { get set }
     
-    
     func fetchContactList()
+    func showAddContactController(from navigationController: UINavigationController)
 }
 
 // PRESENTER -> VIEW
@@ -31,6 +31,7 @@ protocol PresenterToContactListViewProtocol: AnyObject {
 protocol PresenterToContactListRouterProtocol: AnyObject {
     
     static func createContactListModule() -> UIViewController
+    func presentAddContactScreen(from navigationController: UINavigationController)
 }
 
 // PRESENTER -> INTERACTOR

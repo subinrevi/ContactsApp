@@ -9,7 +9,7 @@
 import UIKit
 
 class ContactListRouter: PresenterToContactListRouterProtocol {
-
+    
     static var storyboard: UIStoryboard {
         return UIStoryboard(name: "Main", bundle: Bundle.main)
     }
@@ -34,4 +34,10 @@ class ContactListRouter: PresenterToContactListRouterProtocol {
         return navController
         
     }
+    
+    func presentAddContactScreen(from navigationController: UINavigationController) {
+         let addContactVC = ContactListRouter.storyboard.instantiateViewController(identifier: "AddContactViewController")
+        navigationController.present(addContactVC, animated: true, completion: nil)
+    }
+
 }

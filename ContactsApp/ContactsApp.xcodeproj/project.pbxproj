@@ -21,6 +21,7 @@
 		C3398AFF23F953FA005895C7 /* ContactListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3398AFE23F953FA005895C7 /* ContactListPresenter.swift */; };
 		C3398B0123F9571A005895C7 /* ContactListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3398B0023F9571A005895C7 /* ContactListInteractor.swift */; };
 		C3398B0323F97CA2005895C7 /* ContactListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3398B0223F97CA2005895C7 /* ContactListRouter.swift */; };
+		C3398B0523F9AE36005895C7 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3398B0423F9AE36005895C7 /* AddContactViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		C3398AFE23F953FA005895C7 /* ContactListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListPresenter.swift; sourceTree = "<group>"; };
 		C3398B0023F9571A005895C7 /* ContactListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListInteractor.swift; sourceTree = "<group>"; };
 		C3398B0223F97CA2005895C7 /* ContactListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListRouter.swift; sourceTree = "<group>"; };
+		C3398B0423F9AE36005895C7 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				C3398AEF23F8F8B0005895C7 /* ContactsListViewController.swift */,
+				C3398B0423F9AE36005895C7 /* AddContactViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3398AF723F8FC8E005895C7 /* ContactCell.swift in Sources */,
+				C3398B0523F9AE36005895C7 /* AddContactViewController.swift in Sources */,
 				C3398AFB23F91142005895C7 /* ContactListProtocol.swift in Sources */,
 				0E922A8723F6633300A4FD50 /* ContactsApp.xcdatamodeld in Sources */,
 				C3398B0123F9571A005895C7 /* ContactListInteractor.swift in Sources */,

@@ -20,6 +20,10 @@ class ContactListPresenter: ContactListViewToPresenterProtocol {
         print("Second call comes to the presenter >>")
         interactor?.retrieveContacts()
     }
+    
+    func showAddContactController(from navigationController: UINavigationController) {
+        router?.presentAddContactScreen(from: navigationController)
+    }
 }
 
 

@@ -11,7 +11,6 @@ import UIKit
 class ContactsListViewController: UIViewController {
 
     @IBOutlet weak var contactsTableView: UITableView!
-    
     var presenter: ContactListViewToPresenterProtocol?
     
     var contacts: [Contact] = [] {
@@ -39,8 +38,18 @@ class ContactsListViewController: UIViewController {
         let contactsNib = UINib(nibName: "ContactCell", bundle: nil)
         contactsTableView.register(contactsNib, forCellReuseIdentifier: "ContactCell")
     }
+    
+    //MARK: Button Actions Methods
+    
+    @IBAction func addContactButtonTapped(_ sender: Any) {
+        guard let navController = self.navigationController else {
+            return
+        }
+        presenter?.showAddContactController(from: navController)
+    }
 }
 
+//MARK: PresenterToContactListViewProtocol Methods
 
 extension ContactsListViewController: PresenterToContactListViewProtocol {
     
@@ -50,6 +59,7 @@ extension ContactsListViewController: PresenterToContactListViewProtocol {
     }
 }
 
+//MARK: Table View Delegate Methods
 
 extension ContactsListViewController: UITableViewDataSource, UITableViewDelegate {
     
