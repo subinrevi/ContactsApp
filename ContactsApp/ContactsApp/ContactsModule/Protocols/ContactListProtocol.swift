@@ -9,7 +9,7 @@
 import UIKit
 
 // VIEW -> PRESENTER
-protocol ContactListViewToPresenterProtocol: class {
+protocol ContactListViewToPresenterProtocol: AnyObject {
     var view: PresenterToContactListViewProtocol? { get set }
     var interactor: PresenterToInteractorProtocol? { get set }
     var router: PresenterToContactListRouterProtocol? { get set }
@@ -23,7 +23,7 @@ protocol PresenterToContactListViewProtocol: AnyObject {
     
      var presenter: ContactListViewToPresenterProtocol? { get set }
     
-    func showContactList(info: [Contact])
+     func showContactList(info: [Contact])
 }
 
 // PRESENTER -> ROUTER
