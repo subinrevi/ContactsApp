@@ -50,7 +50,7 @@
             </objects>
             <point key="canvasLocation" x="1952.1739130434785" y="119.86607142857142"/>
         </scene>
-        <!--Add Contact View Controller-->
+        <!--Add Contact-->
         <scene sceneID="mHP-vU-rKV">
             <objects>
                 <viewController storyboardIdentifier="AddContactViewController" id="LxG-ef-xlA" customClass="AddContactViewController" customModule="ContactsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -60,10 +60,22 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="dyK-Xr-aAr"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Contact" id="6LH-nW-YPj">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="RwN-Fh-MBZ">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="LxG-ef-xlA" id="0z0-U8-TKr"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="VAp-tr-Zw9">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="LxG-ef-xlA" id="2h5-zA-7OB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4xK-El-H54" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2786" y="132"/>
+            <point key="canvasLocation" x="3695.652173913044" y="131.91964285714286"/>
         </scene>
         <!--Item-->
         <scene sceneID="gxk-My-VNQ">
@@ -83,6 +95,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmO-n4-60Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="119.86607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KMv-mP-hI2">
+            <objects>
+                <navigationController storyboardIdentifier="AddContactNavigationControler" automaticallyAdjustsScrollViewInsets="NO" id="haJ-g5-LCg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bya-8Z-SvM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LxG-ef-xlA" kind="relationship" relationship="rootViewController" id="2FE-RU-XA0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K5e-E7-Hll" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2785.507246376812" y="131.91964285714286"/>
         </scene>
     </scenes>
 </document>

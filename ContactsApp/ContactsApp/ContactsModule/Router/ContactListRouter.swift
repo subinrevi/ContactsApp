@@ -36,8 +36,8 @@ class ContactListRouter: PresenterToContactListRouterProtocol {
     }
     
     func presentAddContactScreen(from navigationController: UINavigationController) {
-         let addContactVC = ContactListRouter.storyboard.instantiateViewController(identifier: "AddContactViewController")
-        navigationController.present(addContactVC, animated: true, completion: nil)
+         let addContactNavController = ContactListRouter.storyboard.instantiateViewController(identifier: "AddContactNavigationControler")
+         navigationController.present(addContactNavController, animated: true, completion: nil)
     }
 
 }

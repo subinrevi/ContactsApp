@@ -12,8 +12,15 @@ class AddContactViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
+    //MARK: Button Actions
+    @IBAction func doneButtonTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
