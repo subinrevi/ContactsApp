@@ -26,12 +26,10 @@ class ContactsListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        print("First call comes here >")
         presenter?.fetchContactList()
     }
     
     func registerTableViewCell() {
-        
         contactsTableView.estimatedRowHeight = 50
         contactsTableView.rowHeight = UITableView.automaticDimension
         
@@ -54,7 +52,6 @@ class ContactsListViewController: UIViewController {
 extension ContactsListViewController: PresenterToContactListViewProtocol {
     
     func showContactList(info: [Contact]) {
-        print("Fifth call finally comes back to the view controller >>>>>")
         self.contacts = info
     }
 }

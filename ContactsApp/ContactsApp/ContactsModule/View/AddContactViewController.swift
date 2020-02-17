@@ -23,7 +23,6 @@ class AddContactViewController: UIViewController {
         addContactTableView.estimatedRowHeight = 50
         addContactTableView.contentInset = UIEdgeInsets(top: 300, left: 0, bottom: 0, right: 0)
         addContactTableView.backgroundColor = .lightGray
-    
         headerView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(headerView)
         headerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true

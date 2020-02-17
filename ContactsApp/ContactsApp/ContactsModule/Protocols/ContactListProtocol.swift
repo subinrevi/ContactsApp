@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 // VIEW -> PRESENTER
 protocol ContactListViewToPresenterProtocol: class {
     var view: PresenterToContactListViewProtocol? { get set }

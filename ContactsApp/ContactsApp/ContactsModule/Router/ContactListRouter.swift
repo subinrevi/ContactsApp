@@ -18,7 +18,7 @@ class ContactListRouter: PresenterToContactListRouterProtocol {
         
         let navController = storyboard.instantiateViewController(withIdentifier: "NavigationController") as! UINavigationController
         guard let contactListViewController = navController.topViewController as? ContactsListViewController else { fatalError("Invalid View Controller") }
-        
+
         //Create presenter, interactor and router objects.
         
         let presenter: ContactListViewToPresenterProtocol & InteractorToPresenterProtocol  = ContactListPresenter()
@@ -39,5 +39,4 @@ class ContactListRouter: PresenterToContactListRouterProtocol {
          let addContactNavController = ContactListRouter.storyboard.instantiateViewController(identifier: "AddContactNavigationControler")
          navigationController.present(addContactNavController, animated: true, completion: nil)
     }
-
 }

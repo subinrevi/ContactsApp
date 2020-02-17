@@ -11,13 +11,10 @@ import UIKit
 class ContactListPresenter: ContactListViewToPresenterProtocol {
     
     var view: PresenterToContactListViewProtocol?
-    
     var interactor: PresenterToInteractorProtocol?
-    
     var router: PresenterToContactListRouterProtocol?
     
     func fetchContactList() {
-        print("Second call comes to the presenter >>")
         interactor?.retrieveContacts()
     }
     
@@ -30,7 +27,6 @@ class ContactListPresenter: ContactListViewToPresenterProtocol {
 extension ContactListPresenter: InteractorToPresenterProtocol {
     
     func didReceiveContacts(list: [Contact]) {
-        print("Fourth call comes back to the presenter >>>>")
         view?.showContactList(info: list)
     }
 }
