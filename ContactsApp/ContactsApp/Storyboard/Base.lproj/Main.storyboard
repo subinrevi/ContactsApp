@@ -57,7 +57,33 @@
                     <view key="view" contentMode="scaleToFill" id="63U-H9-IY2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7oB-V6-LFg">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Y9v-II-P5K">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y9v-II-P5K" id="38e-5g-Fnu">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="LxG-ef-xlA" id="KdT-Dh-kt1"/>
+                                    <outlet property="delegate" destination="LxG-ef-xlA" id="djW-Jv-n2p"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7oB-V6-LFg" firstAttribute="leading" secondItem="dyK-Xr-aAr" secondAttribute="leading" id="AZj-Hw-VQn"/>
+                            <constraint firstItem="dyK-Xr-aAr" firstAttribute="trailing" secondItem="7oB-V6-LFg" secondAttribute="trailing" id="IuZ-JY-ci2"/>
+                            <constraint firstItem="7oB-V6-LFg" firstAttribute="top" secondItem="dyK-Xr-aAr" secondAttribute="top" id="eIV-BT-3Ak"/>
+                            <constraint firstItem="dyK-Xr-aAr" firstAttribute="bottom" secondItem="7oB-V6-LFg" secondAttribute="bottom" id="mVz-Ni-M2I"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dyK-Xr-aAr"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Contact" id="6LH-nW-YPj">
@@ -72,6 +98,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addContactTableView" destination="7oB-V6-LFg" id="QLD-08-SgS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4xK-El-H54" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
